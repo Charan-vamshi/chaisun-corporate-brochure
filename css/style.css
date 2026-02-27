@@ -312,3 +312,83 @@ html {
     -ms-overflow-style: none;
     scrollbar-width: none;
 }
+/* Trust Section */
+.trust-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.trust-card {
+    background: #ffffff;
+    padding: 30px 20px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+    text-align: center;
+    transition: 0.3s ease;
+}
+
+.trust-card h4 {
+    font-family: 'Poppins', sans-serif;
+    color: #9B1B1B;
+    margin-bottom: 12px;
+}
+
+.trust-card:hover {
+    transform: translateY(-6px);
+}
+/* FAQ */
+.faq details {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 18px 20px;
+    margin-bottom: 15px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.04);
+    cursor: pointer;
+}
+
+.faq summary {
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    color: #1F1F1F;
+}
+
+.faq details[open] summary {
+    color: #9B1B1B;
+}
+
+.faq p {
+    margin-top: 12px;
+    font-size: 14px;
+    color: #555;
+}
+/* Final CTA */
+.final-cta {
+    background: #9B1B1B;
+    color: #ffffff;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.final-cta-box h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 32px;
+    margin-bottom: 15px;
+    color: #1F1F1F;
+}
+
+.final-cta-box p {
+    margin-bottom: 25px;
+    font-size: 16px;
+    color: #333333;
+}
+
+.final-cta .cta-btn {
+    background: #ffffff;
+    color: #9B1B1B;
+}
+
+.final-cta .cta-btn:hover {
+    background: #f4f4f4;
+}
