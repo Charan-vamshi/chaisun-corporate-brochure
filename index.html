@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Chaisun | Premium Spice Brand</title>
-
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 </head>
@@ -33,15 +33,11 @@
     <div class="container">
         <h2>Our Products</h2>
 
-        <div class="slider">
-            <div class="slide">
-                <img src="assets/products/product1.png" alt="Product 1">
-            </div>
-            <div class="slide">
-                <img src="assets/products/product2.png" alt="Product 2">
-            </div>
-            <div class="slide">
-                <img src="assets/products/product3.png" alt="Product 3">
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+
+                <!-- Slides will be auto-generated -->
+
             </div>
         </div>
     </div>
@@ -205,6 +201,35 @@
 <a href="https://wa.me/918884494943" class="mobile-cta">
     Become a Chaisun Partner
 </a>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+    const swiperWrapper = document.querySelector('.swiper-wrapper');
 
+    const totalImages = 20; // Change if needed
+
+    for (let i = 1; i <= totalImages; i++) {
+        const slide = document.createElement('div');
+        slide.classList.add('swiper-slide');
+
+        const img = document.createElement('img');
+        img.src = `assets/products/product${i}.jpeg`;
+        img.alt = `Product ${i}`;
+
+        slide.appendChild(img);
+        swiperWrapper.appendChild(slide);
+    }
+
+    const swiper = new Swiper(".mySwiper", {
+        slidesPerView: 2,
+        spaceBetween: 20,
+        loop: true,
+        centeredSlides: true,
+        breakpoints: {
+            768: {
+                slidesPerView: 4
+            }
+        }
+    });
+</script>
 </body>
 </html>
